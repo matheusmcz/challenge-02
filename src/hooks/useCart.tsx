@@ -23,7 +23,7 @@ const CartContext = createContext<CartContextData>({} as CartContextData);
 
 export function CartProvider({ children }: CartProviderProps): JSX.Element {
   const [cart, setCart] = useState<Product[]>(() => {
-    const storagedCart = localStorage.getItem("@Rocketseat:cart");
+    const storagedCart = localStorage.getItem("@RocketShoes:cart");
 
     if (storagedCart) {
       return JSON.parse(storagedCart);
